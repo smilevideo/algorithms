@@ -2,6 +2,7 @@
 //e.g. listPermutations('abc') will return ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']
 //maximum number of permutations (no duplicate characters) is n!, where n is string length
 
+//time-complexity: O(n!)
 const listPermutations = (string) => {
     let ret = [];
 
