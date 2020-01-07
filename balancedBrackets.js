@@ -43,7 +43,7 @@ const isBalanced = (string) => {
     }
 }
 
-console.log('should be true:', isBalanced("()[]"));
-console.log('should be true:', isBalanced("([])"));
-console.log('should be false:', isBalanced("({)}"));
-console.log('should be false:', isBalanced("{[}"));
+// console.log('should be true:', isBalanced("()[]"));
+// console.log('should be true:', isBalanced("([])"));
+// console.log('should be false:', isBalanced("({)}"));
+// console.log('should be false:', isBalanced("{[}"));
