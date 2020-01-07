@@ -1,4 +1,4 @@
-//Given a string, finds and return all permutations of that string in an array
+//Given a string, finds and returns all permutations of that string in an array
 //e.g. listPermutations('abc') will return ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']
 //maximum number of permutations (no duplicate characters) is n!, where n is string length
 
@@ -35,6 +35,6 @@ const listPermutations = (string) => {
     return ret;
 }
 
-console.log(listPermutations('abcd'));
-console.log(listPermutations('aba'));
-console.log(listPermutations(''));
+// console.log(listPermutations('abcd'));
+// console.log(listPermutations('aba'));
+// console.log(listPermutations(''));
