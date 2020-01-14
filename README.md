@@ -12,3 +12,5 @@ I wrote a brute force algo and then looked online to write an optimal dynamic pr
 Time-complexity: O(n), Space-complexity: O(1)
 - [Longest Subarray Length](https://github.com/smilevideo/algorithms/blob/master/lengthOfLongestSubstring.js): From Leetcode #3: Given a string, find the length of the longest substring without repeating characters.  
 Time-complexity: O(n), Space-complexity: O(n)
+- [Counting Sort](https://github.com/smilevideo/algorithms/blob/master/countingSort.js): Potentially O(n) sorting algorithm that is applicable when the array consists only of non-negative integers and only efficient when k is "small" (i.e. O(n), could use more clarification)
+Time-complexity: O(n+k), Space-complexity: O(n+k), where k is the largest integer in the array
