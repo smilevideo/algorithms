@@ -26,11 +26,11 @@
 
 //dynamic programming (DP) approach I read about online: time-complexity is O(n), space-complexity is O(1)
 const largestSubarraySum = (arr) => {
-    let max = arr[0];
-    let currentMax = arr[0]; //currentMax is the maximum of the subarrays that end at the current index
+    let max = 0;
+    let currentMax = 0; //currentMax is the maximum of the subarrays that end at the current index
 
-    for (let i = 1; i < arr.length; i++) {
-        currentMax = arr[i] + ( currentMax > 0 ? currentMax : 0 )
+    for (let i = 0; i < arr.length; i++) {
+        currentMax = Math.max(arr[i], currentMax + arr[i]);
 
         if (currentMax > max) max = currentMax;
     }
