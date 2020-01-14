@@ -12,7 +12,7 @@ const lengthOfLongestSubstring = (string) => {
         if (hash[string[i]] >= currentStart) { 
             currentStart = hash[string[i]] + 1;
         }
-        //otherwise update max when needed
+        //otherwise check if we can update max
         else {
             max = Math.max(max, i - currentStart + 1);
         }
