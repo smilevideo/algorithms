@@ -17,6 +17,6 @@ Space-complexity: O(n)
 - [Counting Sort](https://github.com/smilevideo/algorithms/blob/master/countingSort.js): Potentially O(n) sorting algorithm that is applicable when the array consists only of non-negative integers and k is less than n so that O(n+k) reduces to O(n)  
 Time-complexity: O(n+k), where k is the largest integer in the array  
 Space-complexity: O(n+k)  
-- [Generate Subsets](https://github.com/smilevideo/algorithms/blob/master/generateSubsets.js): Given a non-negative integer n, generate all subsets of the set \[0, 1, ..., n-1\]. Using a binary representation of integers approach.  
+- [Generate Subsets](https://github.com/smilevideo/algorithms/blob/master/generateSubsets.js): Given a non-negative integer n, generate all subsets of the set \[0, 1, ..., n-1\]. Using a binary representation of integers approach. Not sure if optimal.  
 Time-complexity: O(2\*\*n logn), because the conversion to binary and the length of the resultant binary string are both O(logn)  
 Space-complexity: O(2\*\*n logn), for essentially the same reasons given for the time-complexity
