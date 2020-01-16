@@ -1,5 +1,6 @@
 //From Leetcode #3:
 //Given a string, find the length of the longest substring without repeating characters
+// Note that substrings are contiguous subsets of the string
 
 //Time-complexity: O(n), Space-complexity: O(n)
 const lengthOfLongestSubstring = (string) => {
