@@ -27,10 +27,11 @@
 const longestIS = (arr) => {
     const dp = []; //array to hold indexes pointing to the last element in the subsequence of length j
     const pre = []; //array to hold indexes pointing to the previous number in the subsequence ending at i
-    let max = 0;
+    let max = 0; //holds the maximum length out of the subsequences encountered
 
     for (let i = 0; i < arr.length; i++) {
-        //binary search for the smallest value in arr[dp] that is greater than arr[i]
+        //binary search for the smallest value of arr[dp[j]] that is greater than arr[i]
+        // possible because arr[dp[j]] maintains a strictly increasing sequence
         let start = 1;
         let end = max;
         let mid = 0;
@@ -45,8 +46,11 @@ const longestIS = (arr) => {
             }
         }
         
-        dp[start] = i;
+        //replace the ending element in the subsequence of length j tracked by dp[j] with the current element
+        dp[start] = i; 
+        //the preceding element in the subsequence ending at index i will be the ending index of the subsequence with length j-1
         pre[i] = dp[start - 1];
+
         max = Math.max(max, start);
     }
 
