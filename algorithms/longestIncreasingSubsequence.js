@@ -25,13 +25,12 @@
 
 /* O(n log n) solution */
 const longestIS = (arr) => {
-    const dp = [];
-    const pre = [];
+    const dp = []; //array to hold indexes pointing to the last element in the subsequence of length j
+    const pre = []; //array to hold indexes pointing to the previous number in the subsequence ending at i
     let max = 0;
 
     for (let i = 0; i < arr.length; i++) {
-        //binary search through the array holding indexes (indexed by j) in the original array (indexed by i) 
-        //  that are where the lowest subsequence of length j encountered so far ends
+        //binary search for the smallest value in arr[dp] that is greater than arr[i]
         let start = 1;
         let end = max;
         let mid = 0;
@@ -51,6 +50,7 @@ const longestIS = (arr) => {
         max = Math.max(max, start);
     }
 
+    //recreate the longest subsequence using pre
     const ret = [];
     let k = dp[max];
     for (let i = max - 1; i >= 0; i--) {
