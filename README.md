@@ -3,6 +3,9 @@ JavaScript solutions I've written for algorithm problems, probably only for my o
 
 
 ## Current list
+- [Binary Search](https://github.com/smilevideo/algorithms/blob/master/binarySearch.js): A simple binary search. Given an array of numbers sorted in increasing order and a number to look for, return the index of the number if it's in the array or null otherwise.  
+Time-complexity: O(logn)  
+Space-complexity: O(1)  
 - [String Permutations](https://github.com/smilevideo/algorithms/blob/master/stringPermutations.js): Given a string, list all unique permutations of it in an array.  
 Time-complexity: O(n!)
 - [Balanced Brackets](https://github.com/smilevideo/algorithms/blob/master/balancedBrackets.js): Given a string of opening and closing brackets, determine whether it is balanced.  
