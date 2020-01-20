@@ -19,5 +19,5 @@ JavaScript solutions I've written for algorithm problems, probably only for my o
 Unit testing with jest:
 ```
 npm install
-npm run test
+jest
 ```
