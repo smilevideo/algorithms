@@ -65,6 +65,4 @@ const longestIS = (arr) => {
     return ret;
 }
 
-module.exports = {
-    LIS: longestIS
-}
+module.exports = longestIS;
