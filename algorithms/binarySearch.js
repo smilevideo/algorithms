@@ -4,9 +4,10 @@
 const binarySearch = (arr, x) => {
     let start = 0;
     let end = arr.length - 1;
-    let mid = Math.floor((start + end) / 2); //could also use Math.ceil - neither will be strictly better than the other in every case
-
+    
     while (start <= end) {
+        let mid = Math.floor((start + end) / 2); //could also use Math.ceil - neither will be strictly better than the other in every case
+
         if (x < arr[mid]) {
             end = mid - 1;
         }
@@ -16,8 +17,6 @@ const binarySearch = (arr, x) => {
         else {
             return mid;
         }
-
-        mid = Math.floor((start + end) / 2);
     }
 
     return null; //number wasn't found so don't return an index;
