@@ -26,10 +26,41 @@
 /* O(n log n) solution */
 const longestIS = (arr) => {
     const dp = [];
+    const pre = [];
+    let max = 0;
+
     for (let i = 0; i < arr.length; i++) {
-        dp[i] = 0;
+        //binary search through the array holding indexes (indexed by j) in the original array (indexed by i) 
+        //  that are where the lowest subsequence of length j encountered so far ends
+        let start = 1;
+        let end = max;
+        let mid = 0;
+        while (start <= end) {
+            mid = Math.ceil((start + end) / 2);
+    
+            if (arr[i] < arr[dp[mid]]) {
+                end = mid - 1;
+            }
+            else {
+                start = mid + 1;
+            }
+        }
+        
+        dp[start] = i;
+        pre[i] = dp[start - 1];
+        max = Math.max(max, start);
     }
+
+    const ret = [];
+    let k = dp[max];
+    for (let i = max - 1; i >= 0; i--) {
+        ret[i] = arr[k];
+        k = pre[k]
+    }
+
+    return ret;
 }
 
-console.log(longestIS([6, 2, 5, 1, 7, 4, 8, 3]));
-//should return 4 because [2, 5, 7, 8] is the longest increasing subsequence
+module.exports = {
+    LIS: longestIS
+}
