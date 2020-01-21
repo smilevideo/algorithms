@@ -1,5 +1,6 @@
 # Algorithms
-JavaScript solutions I've written for algorithm problems, probably only for my own reference
+JavaScript solutions I've written for algorithm problems, probably only for my own reference.  
+Many of these were prompted during my read-through of the [Competitive Programmer's Handbook](https://cses.fi/book/book.pdf), while others were seen on Leetcode/elsewhere.
 
 
 ## Current list
